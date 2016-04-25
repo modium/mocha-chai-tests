@@ -21,8 +21,15 @@
   },
   "homepage": "https://github.com/modium/mocha-chai-tests#readme",
   "devDependencies": {
+    "blanket": "^1.2.3",
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
     "selenium-webdriver": "^2.53.1"
+  },
+  "config": {
+	"blanket": {
+		"pattern": [ "index.js" ],
+		"data-cover-never": "node_modules"
+	}
   }
 }
