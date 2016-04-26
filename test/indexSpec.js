@@ -1,7 +1,10 @@
 var chai = require('chai');
-var expect = require('chai').expect;
-
+var expect = chai.expect;
 var functions = require('../index');
+// var webdriver = require('selenium-webdriver');
+// var client = new webdriver.Builder().withCapabilities({
+	// 'browserName': 'chrome'
+// }).build();
 
 describe('Sanitize', function() {
 	// beforeEach(function() {
@@ -42,7 +45,8 @@ describe('Star Wars info', function() {
 			console.log(reply);
 			expect(reply.name).to.equal('Luke Skywalker');
 			expect(reply.height).to.equal('172');
-			done();
+			done(); //this callback method tells Mocha this is an async function
+					//and that the test should wait until the process is complete
 		})
 	})
 })
