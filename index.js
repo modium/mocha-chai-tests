@@ -34,3 +34,9 @@ exports.info = function(callback) {
 	})
 	.end();
 }
+
+exports.infoLang = function(infoFunc, callback) {
+	infoFunc(function(reply) {
+		callback('Language is ' + reply.language)
+	})
+}
